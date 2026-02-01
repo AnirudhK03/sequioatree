@@ -4,123 +4,306 @@ export const AI_RESPONSE =
   "Sure. Here is a Typescript code block for your Analog Clock project. It is built using React, and uses the local time for London, England as standard. Let me know if you would like to make any refinements to the code.";
 
 export const CARDS: MetricCardData[] = [
+  // ── Idea Validation ─────────────────────────────────────────
+  // Problem & Demand
   {
-    id: "cost-per-hire",
-    label: "Reduction in cost-per-hire",
-    value: "83%",
-    color: "#C4B5FD",
-    type: "metric",
-    category: "market",
-    detail: {
-      title: "Significant cost savings in recruiting",
-      summary:
-        "AI-driven sourcing dramatically reduces the cost of finding qualified candidates by automating outreach, screening, and initial engagement.",
-      points: [
-        "Average cost-per-hire dropped from $4,700 to $799 across enterprise clients",
-        "Eliminated need for 3rd-party recruiting agencies in 78% of roles",
-        "Time-to-fill reduced by 60%, compounding cost savings",
-        "ROI positive within first month of deployment",
-      ],
-      source: "Internal benchmark study, Q3 2024",
-    },
-  },
-  {
-    id: "team-image",
-    label: "Team collaboration",
-    value: "",
-    color: "transparent",
-    type: "image",
-    category: "market",
-    detail: {
-      title: "Collaborative hiring at scale",
-      summary: "Teams using the platform report higher collaboration and faster decision-making.",
-      points: [
-        "Hiring managers spend 40% less time on admin tasks",
-        "Interview panel coordination automated end-to-end",
-        "Real-time candidate scoring visible to all stakeholders",
-      ],
-      source: "Customer interviews, 2024",
-    },
-  },
-  {
-    id: "testimonial-sarah",
-    label: "Sarah, Direct Sourcing Consultant",
-    value: "",
-    color: "#DDD6FE",
-    type: "testimonial",
-    category: "market",
-    author: "Sarah, Direct Sourcing Consultant",
-    quote:
-      "Popp is an easy-to-use AI tool that is making my life a lot easier — it is helping me cut down the number of calls I need to make to fill a booking. You can easily set up a campaign in ten minutes and move on to your next job.",
-    detail: {
-      title: "Consultant testimonial",
-      summary: "Sarah has been using the platform for 8 months and has seen dramatic improvements.",
-      points: [
-        "Reduced daily outreach calls by 70%",
-        "Campaign setup time went from 2 hours to 10 minutes",
-        "Candidate quality improved due to better targeting",
-        "Now handles 3x more open roles simultaneously",
-      ],
-      source: "Customer interview, August 2024",
-    },
-  },
-  {
-    id: "response-rate",
-    label: "Increase in response rate",
-    value: "4X",
-    color: "#E5E7EB",
-    type: "chart-bar",
-    category: "market",
-    detail: {
-      title: "Dramatically higher candidate engagement",
-      summary:
-        "Personalized AI-crafted outreach messages achieve 4x the response rate compared to traditional templated emails.",
-      points: [
-        "Average response rate increased from 8% to 32%",
-        "Messages are personalized using candidate profile data and role context",
-        "A/B testing built in — top performing variants auto-selected",
-        "Follow-up sequences optimized by ML model",
-      ],
-      source: "Platform analytics, 2024",
-    },
-  },
-  {
-    id: "satisfaction",
-    label: "Candidate satisfaction rating",
-    value: "4.8*",
+    id: "pain-severity",
+    label: "Pain Severity",
+    value: "9.2",
     color: "#FCA5A5",
     type: "chart-ring",
     category: "idea",
+    subcategory: "Problem & Demand",
     detail: {
-      title: "Best-in-class candidate experience",
-      summary: "Candidates rate their experience significantly higher when engaged through the platform.",
+      title: "How severe is the problem?",
+      summary:
+        "Measures the intensity of the pain point your target users experience. A higher score signals stronger motivation to adopt a solution.",
       points: [
-        "4.8 out of 5 average rating across 12,000+ candidates surveyed",
-        "92% said the process felt personalized and respectful",
-        "Ghosting rate dropped by 65% compared to manual outreach",
-        "Candidates are 3x more likely to refer others",
+        "Users rated the problem 9.2/10 in severity",
+        "87% said it directly impacts revenue or productivity",
+        "Top-3 pain point cited across all interview segments",
+        "Strong emotional language used when describing the problem",
       ],
-      source: "Candidate survey, Q2 2024",
+      source: "User interviews & survey data",
     },
   },
   {
-    id: "nps",
-    label: "Increase in candidate NPS",
-    value: "52%",
+    id: "problem-frequency",
+    label: "Problem Frequency",
+    value: "Daily",
+    color: "#C4B5FD",
+    type: "metric",
+    category: "idea",
+    subcategory: "Problem & Demand",
+    detail: {
+      title: "How often does the problem occur?",
+      summary:
+        "Frequency of occurrence directly correlates with willingness to pay. Daily problems create habitual product usage.",
+      points: [
+        "72% of respondents encounter this problem daily",
+        "Average of 3.4 occurrences per workday",
+        "Problem frequency increases with team size",
+        "Peak occurrence during high-stakes periods (quarter-end, launches)",
+      ],
+      source: "Usage pattern analysis",
+    },
+  },
+  {
+    id: "existing-spend",
+    label: "Existing Spend",
+    value: "$4.2K",
+    color: "#6EE7B7",
+    type: "metric",
+    category: "idea",
+    subcategory: "Problem & Demand",
+    detail: {
+      title: "What are users already spending to solve this?",
+      summary:
+        "Existing spend validates willingness to pay. Users already allocating budget to workarounds are primed for a better solution.",
+      points: [
+        "Average annual spend of $4,200 per team on workarounds",
+        "35% use paid tools that partially address the problem",
+        "18% have hired dedicated staff to manage the issue",
+        "Budget already allocated — no need to create new line items",
+      ],
+      source: "Market spending analysis",
+    },
+  },
+  {
+    id: "bandaid-solutions",
+    label: "Band-Aid Solutions",
+    value: "3.7",
+    color: "#FDE68A",
+    type: "chart-bar",
+    category: "idea",
+    subcategory: "Problem & Demand",
+    detail: {
+      title: "How many workarounds are users juggling?",
+      summary:
+        "A high number of band-aid solutions indicates the problem is real but unsolved. Each workaround is a friction point your product can eliminate.",
+      points: [
+        "Average user relies on 3.7 separate tools or workarounds",
+        "Spreadsheets are the #1 band-aid (used by 64%)",
+        "Manual processes consume ~6 hours/week per team",
+        "High error rate (23%) due to fragmented workflows",
+      ],
+      source: "Workflow audit",
+    },
+  },
+  // Market & Competition
+  {
+    id: "competitive-landscape",
+    label: "Competitive Landscape",
+    value: "Moderate",
+    color: "#E5E7EB",
+    type: "metric",
+    category: "idea",
+    subcategory: "Market & Competition",
+    detail: {
+      title: "How crowded is the market?",
+      summary:
+        "A moderate competitive landscape means the market is validated but not saturated — ideal for a differentiated entrant.",
+      points: [
+        "12 direct competitors identified in the space",
+        "Top 3 players hold ~45% market share",
+        "No clear dominant winner — market is still fragmenting",
+        "Most competitors are horizontal; vertical specialization is an opening",
+      ],
+      source: "Competitive analysis",
+    },
+  },
+  {
+    id: "competitive-gaps",
+    label: "Competitive Gaps",
+    value: "High",
+    color: "#DDD6FE",
+    type: "metric",
+    category: "idea",
+    subcategory: "Market & Competition",
+    detail: {
+      title: "Where are competitors falling short?",
+      summary:
+        "Identifies the specific areas where existing solutions fail to meet user needs, revealing your opportunity to differentiate.",
+      points: [
+        "No competitor offers real-time collaboration on this workflow",
+        "Pricing models are misaligned with SMB budgets",
+        "Onboarding takes 2+ weeks for all major competitors",
+        "Integration ecosystem is weak — most require manual data entry",
+      ],
+      source: "Competitor gap analysis",
+    },
+  },
+  // Feasibility & Risk
+  {
+    id: "regulatory-risk",
+    label: "Regulatory Risk",
+    value: "Low",
+    color: "#BBF7D0",
+    type: "metric",
+    category: "idea",
+    subcategory: "Feasibility & Risk",
+    detail: {
+      title: "What regulatory hurdles exist?",
+      summary:
+        "Low regulatory risk means faster go-to-market and fewer compliance costs. Critical for investor confidence.",
+      points: [
+        "No industry-specific licensing required",
+        "Standard data privacy compliance (SOC 2, GDPR) sufficient",
+        "No pending legislation that would impact the product category",
+        "Existing frameworks cover all planned functionality",
+      ],
+      source: "Legal & compliance review",
+    },
+  },
+  {
+    id: "execution-constraints",
+    label: "Execution Constraints",
+    value: "2",
+    color: "#FECACA",
+    type: "metric",
+    category: "idea",
+    subcategory: "Feasibility & Risk",
+    detail: {
+      title: "What execution risks should we watch?",
+      summary:
+        "Only 2 major execution constraints identified, both mitigable with proper planning.",
+      points: [
+        "Requires integration with legacy systems at enterprise clients",
+        "ML model accuracy needs >95% to meet user expectations",
+        "Both constraints have clear technical paths to resolution",
+        "No hard dependencies on third-party approvals or partnerships",
+      ],
+      source: "Technical feasibility assessment",
+    },
+  },
+  // Product & Strategy
+  {
+    id: "mvp-wedge",
+    label: "MVP Wedge",
+    value: "Strong",
+    color: "#A5F3FC",
+    type: "metric",
+    category: "idea",
+    subcategory: "Product & Strategy",
+    detail: {
+      title: "Is there a clear MVP entry point?",
+      summary:
+        "A strong MVP wedge means you can deliver immediate value with a focused feature set, then expand.",
+      points: [
+        "Single workflow automation solves the #1 pain point",
+        "MVP can launch with 3 core features",
+        "Early users willing to adopt even with limited feature set",
+        "Clear expansion path from wedge to full platform",
+      ],
+      source: "Product strategy analysis",
+    },
+  },
+  {
+    id: "unique-advantage",
+    label: "Unique Advantage",
+    value: "AI-Native",
+    color: "#C4B5FD",
+    type: "metric",
+    category: "idea",
+    subcategory: "Product & Strategy",
+    detail: {
+      title: "What's our unfair advantage?",
+      summary:
+        "Being AI-native from day one enables capabilities that bolt-on AI competitors cannot match.",
+      points: [
+        "Purpose-built AI models trained on domain-specific data",
+        "10x faster processing vs. competitors adding AI as a feature",
+        "Proprietary data flywheel improves with each customer",
+        "Architecture enables personalization impossible with legacy systems",
+      ],
+      source: "Technical differentiation analysis",
+    },
+  },
+  // Market Readiness
+  {
+    id: "pmf-readiness",
+    label: "PMF Readiness",
+    value: "82%",
     color: "#6EE7B7",
     type: "chart-progress",
     category: "idea",
+    subcategory: "Market Readiness",
     detail: {
-      title: "Net Promoter Score surging",
+      title: "How close are we to product-market fit?",
       summary:
-        "Candidate NPS jumped 52 points after implementing AI-powered communication flows.",
+        "82% PMF readiness score based on the Sean Ellis test and retention metrics from early users.",
       points: [
-        "NPS went from +12 to +64 in 6 months",
-        "Detractors reduced by 80% through faster response times",
-        "Promoters increased as candidates felt more valued",
-        "Employer brand perception improved across Glassdoor reviews",
+        "42% of beta users say they'd be 'very disappointed' without the product",
+        "Week-4 retention at 68% — above benchmark for B2B SaaS",
+        "Organic referral rate of 24% among early adopters",
+        "NPS of +54 from first 200 users",
       ],
-      source: "NPS tracking dashboard, 2024",
+      source: "PMF survey & cohort analysis",
+    },
+  },
+
+  // ── Market Validation ───────────────────────────────────────
+  {
+    id: "sam",
+    label: "SAM",
+    value: "$2.4B",
+    color: "#C4B5FD",
+    type: "metric",
+    category: "market",
+    subcategory: "Market Sizing",
+    detail: {
+      title: "Serviceable Addressable Market",
+      summary:
+        "The segment of the TAM that your product can realistically serve given your go-to-market strategy and product capabilities.",
+      points: [
+        "$2.4B addressable within target verticals and geographies",
+        "Focused on mid-market and enterprise segments",
+        "North America and Western Europe as initial markets",
+        "Growing at 18% CAGR driven by digital transformation",
+      ],
+      source: "Market sizing model",
+    },
+  },
+  {
+    id: "som",
+    label: "SOM",
+    value: "$180M",
+    color: "#FDE68A",
+    type: "metric",
+    category: "market",
+    subcategory: "Market Sizing",
+    detail: {
+      title: "Serviceable Obtainable Market",
+      summary:
+        "The realistic portion of SAM you can capture in the near term given current resources, competition, and go-to-market motion.",
+      points: [
+        "$180M capturable within 3-5 year horizon",
+        "Based on 7.5% market share target",
+        "Bottoms-up model validated by comparable company benchmarks",
+        "Conservative estimate — excludes platform expansion revenue",
+      ],
+      source: "Revenue model & benchmarking",
+    },
+  },
+  {
+    id: "swot",
+    label: "SWOT Analysis",
+    value: "",
+    color: "#E5E7EB",
+    type: "chart-bar",
+    category: "market",
+    subcategory: "Strategic Analysis",
+    detail: {
+      title: "SWOT Overview",
+      summary:
+        "Strengths, weaknesses, opportunities, and threats mapped for strategic positioning.",
+      points: [
+        "Strength: AI-native architecture and proprietary data moat",
+        "Weakness: Early-stage brand awareness and limited sales team",
+        "Opportunity: Incumbents slow to adopt AI — window of 18-24 months",
+        "Threat: Well-funded competitor pivoting into adjacent space",
+      ],
+      source: "Strategic planning session",
     },
   },
 ];

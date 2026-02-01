@@ -12,6 +12,20 @@ interface ResultsSectionProps {
   onCardClick: (card: MetricCardData) => void;
 }
 
+function groupBySubcategory(cards: MetricCardData[]) {
+  const groups: { subcategory: string; cards: MetricCardData[] }[] = [];
+  for (const card of cards) {
+    const sub = card.subcategory || "General";
+    const existing = groups.find((g) => g.subcategory === sub);
+    if (existing) {
+      existing.cards.push(card);
+    } else {
+      groups.push({ subcategory: sub, cards: [card] });
+    }
+  }
+  return groups;
+}
+
 export default function ResultsSection({
   aiText,
   typingDone,
@@ -19,6 +33,9 @@ export default function ResultsSection({
   ideaCards,
   onCardClick,
 }: ResultsSectionProps) {
+  const ideaGroups = groupBySubcategory(ideaCards);
+  const marketGroups = groupBySubcategory(marketCards);
+
   return (
     <motion.section
       className="relative z-10 px-6 md:px-12 lg:px-20 pb-32"
@@ -63,7 +80,7 @@ export default function ResultsSection({
           transition={{ duration: 0.5 }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Validate Market */}
+            {/* Idea Validation */}
             <div>
               <motion.h2
                 className="text-2xl font-bold text-center mb-8"
@@ -72,32 +89,36 @@ export default function ResultsSection({
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                Validate Market
+                Idea Validation
               </motion.h2>
-              <div className="grid grid-cols-2 gap-4 auto-rows-[13rem]">
-                {marketCards.map((card, i) => {
-                  const spanClass: Record<string, string> = {
-                    "cost-per-hire": "col-span-1 row-span-1",
-                    "team-image": "col-span-1 row-span-2",
-                    "testimonial-sarah": "col-span-1 row-span-2",
-                    "response-rate": "col-span-2 row-span-1",
-                  };
-                  return (
-                    <div key={card.id} className={spanClass[card.id] || "col-span-1"}>
-                      <div className="h-full">
-                        <MetricCard
-                          card={card}
-                          index={i}
-                          onClick={() => onCardClick(card)}
-                        />
+              {ideaGroups.map((group) => (
+                <div key={group.subcategory} className="mb-6">
+                  <motion.h3
+                    className="text-xs font-mono uppercase tracking-widest text-gray-400 mb-3"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                  >
+                    {group.subcategory}
+                  </motion.h3>
+                  <div className="grid grid-cols-2 gap-3 auto-rows-[11rem]">
+                    {group.cards.map((card, i) => (
+                      <div key={card.id} className="col-span-1">
+                        <div className="h-full">
+                          <MetricCard
+                            card={card}
+                            index={i}
+                            onClick={() => onCardClick(card)}
+                          />
+                        </div>
                       </div>
-                    </div>
-                  );
-                })}
-              </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
 
-            {/* Validate Idea */}
+            {/* Market Validation */}
             <div>
               <motion.h2
                 className="text-2xl font-bold text-center mb-8"
@@ -106,21 +127,33 @@ export default function ResultsSection({
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                Validate Idea
+                Market Validation
               </motion.h2>
-              <div className="grid grid-cols-1 gap-4 auto-rows-[13rem]">
-                {ideaCards.map((card, i) => (
-                  <div key={card.id}>
-                    <div className="h-full">
-                      <MetricCard
-                        card={card}
-                        index={i}
-                        onClick={() => onCardClick(card)}
-                      />
-                    </div>
+              {marketGroups.map((group) => (
+                <div key={group.subcategory} className="mb-6">
+                  <motion.h3
+                    className="text-xs font-mono uppercase tracking-widest text-gray-400 mb-3"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                  >
+                    {group.subcategory}
+                  </motion.h3>
+                  <div className="grid grid-cols-2 gap-3 auto-rows-[11rem]">
+                    {group.cards.map((card, i) => (
+                      <div key={card.id} className="col-span-1">
+                        <div className="h-full">
+                          <MetricCard
+                            card={card}
+                            index={i}
+                            onClick={() => onCardClick(card)}
+                          />
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </motion.div>

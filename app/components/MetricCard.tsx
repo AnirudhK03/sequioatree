@@ -11,6 +11,7 @@ export type MetricCardData = {
   textColor?: string;
   type: "metric" | "image" | "testimonial" | "chart-bar" | "chart-ring" | "chart-progress";
   category: "market" | "idea";
+  subcategory?: string;
   detail: {
     title: string;
     summary: string;

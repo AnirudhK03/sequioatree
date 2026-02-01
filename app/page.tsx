@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import { MetricCardData } from "./components/MetricCard";
 import ExpandedCard from "./components/ExpandedCard";
@@ -8,22 +8,29 @@ import HeroSection from "./components/HeroSection";
 import ResultsSection from "./components/ResultsSection";
 import SequoiaLogo from "./components/SequoiaLogo";
 import { useTypewriter } from "./hooks/useTypewriter";
-import { AI_RESPONSE, CARDS } from "./data/cards";
+import { MOCK_API_RESPONSE, apiResponseToCards } from "./data/cards";
 
 export default function Home() {
   const [prompt, setPrompt] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [expandedCard, setExpandedCard] = useState<MetricCardData | null>(null);
 
-  const { displayed: aiText, done: typingDone } = useTypewriter(AI_RESPONSE, submitted);
+  // When the real API is wired up, replace MOCK_API_RESPONSE with the
+  // actual response. The rest of the pipeline stays the same.
+  const { aiText: aiResponse, cards } = useMemo(
+    () => apiResponseToCards(MOCK_API_RESPONSE),
+    [],
+  );
+
+  const { displayed: aiText, done: typingDone } = useTypewriter(aiResponse, submitted);
 
   const handleSubmit = useCallback(() => {
     if (!prompt.trim()) return;
     setSubmitted(true);
   }, [prompt]);
 
-  const marketCards = CARDS.filter((c) => c.category === "market");
-  const ideaCards = CARDS.filter((c) => c.category === "idea");
+  const marketCards = cards.filter((c) => c.category === "market");
+  const ideaCards = cards.filter((c) => c.category === "idea");
 
   return (
     <LayoutGroup>

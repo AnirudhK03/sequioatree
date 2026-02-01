@@ -1,0 +1,83 @@
+{
+  "scope": { "segments": ["Independent leisure travel advisors (modern, host-networked)", "Gen Z leisure travelers (18–29)", "Creator-led group trips (micro-communities)", "Premium mass-market (4-star hotels, experiential add-ons)"], "geographies": ["United States (primary GTM)", "Outbound to Europe, Mexico/Caribbean, Japan"], "time_window": "Evidence emphasized from 2024–2026", "key_assumptions": ["Gen Z continues to over-index on social discovery and mobile booking", "Advisor usage/preference among Gen Z converts into actual purchase in the teens (%) near-term", "Advisor planning fees remain mainstream (>50% of advisors charge) with $100–$300 common", "Supplier commission bands hold: hotels/cruise 10–16%, tours 10–15%, air negligible"] },
+
+  "1_problem_and_demand": {
+    "pain_severity": { "summary": "High information overload + disruption anxiety. Gen Z wants curated experiences, perks, and rescue when things go sideways.", "quantification": ["U.S. agency-channel air sales hit ~$100.4B in 2025, a record, signaling strong intermediary demand; NDC adds complexity (~21% of ARC-settled transactions in Dec’25).", "8 in 10 U.S. adults plan to vacation in next 12 months; avg vacation budget ~$5,051 and ~4.1 trips/person (late-2024 study for 2025).", "Social discovery rises: U.S. social use in trip research ~19% in 2025 (up from ~16% in 2023); Gen Z most influenced by social/influencers.", "AI planning adoption growing: ~39% of travelers used AI for research/planning by 2H’25; Gen Z adoption near millennials."] },
+    "problem_frequency": "Trip planning occurs multiple times/year (median 3–4 trips), with research/decision loops across social, search, and OTAs; disruptions (delays/cancellations) remain common, requiring support.",
+    "existing_spend": ["Agency-channel market size (U.S.) revenue ~$46–47B in 2025; agency air gross ~$100B+; cruise/tour/hotel via agencies add tens of billions more.", "Gen Z/young traveler package/group budgets center ~$2,000–$3,000/trip; premium experiences growing."],
+    "band_aid_solutions": ["DIY via OTAs and deal apps (Expedia, Booking, Hopper)", "Crowdsourcing on TikTok/Instagram/YouTube", "Generic AI itinerary tools", "Ad-hoc ‘friend who travels a lot’ advice"],
+    "customer_willingness_to_pay": { "summary": "Moderate-to-high when value is clear (perks, time savings, disruption support). Majority of advisors now charge fees; common $100–$300 for standard trips; complex FIT/group fees can reach $500–$2,500.", "signals": [">50% of U.S. advisors report charging professional fees; majority in $100–$300 band.", "Younger travelers express preference for advisors in surveys (≈38% of Gen Z/Millennials), citing overwhelm; social-led and creator-led trips see paid uptake (e.g., TrovaTrip budgets median ~$2,000)."] },
+    "insight": "Gen Z’s path-to-purchase is social-first and looped; a ‘human + tech’ advisor that meets them on mobile/social, prices transparently, and guarantees disruption support can convert inspiration into booked, higher-yield itineraries."
+  },
+
+  "2_market_and_competition": {
+    "competitive_landscape": [
+      { "category": "OTAs/Meta", "examples": ["Expedia Group brands", "Booking Holdings brands", "Hopper", "Skyscanner"], "why_customers_choose_them": ["Price discovery and breadth", "24/7 self-serve UX", "Aggressive mobile UX and rewards"] },
+      { "category": "Independent advisors/hosted networks (leisure)", "examples": ["Nexion, Travel Leaders, Fora, Outside Agents, Travel Quest, Cruise Planners (franchise)"], "why_customers_choose_them": ["Human curation, perks via consortia", "Trip management and disruption help", "Destination/cruise expertise; creator/community-led trips"] },
+      { "category": "Tour operators/DMCs", "examples": ["Intrepid, G Adventures, Tauck, Trafalgar; local DMC partners"], "why_customers_choose_them": ["Turnkey itineraries, group departures", "On-the-ground operations and guarantees"] },
+      { "category": "Corporate TMCs (not target)", "examples": ["Amex GBT, CWT, BCD"], "why_customers_choose_them": ["Policy compliance, reporting, duty-of-care (corporate)"] }
+    ],
+    "competitive_gaps": ["Social-to-booking handoff remains leaky; few seamless advisor-native flows from TikTok/IG to checkout.", "Weak real-time ops support in OTAs during IRROPS; Gen Z wants fast human help.", "AI tools exist but lack advisor-quality curation and negotiated perks.", "Transparent, modular fees for Gen Z (pay for planning/support only) are rare."],
+    "market_dynamics": ["Agency channel at record volumes; NDC/ancillaries complicate DIY and favor advisors.", "Social discovery and creator economy steer destination demand; women and younger travelers drive group travel.", "AI planning rising but trust remains with human validation; intent high for AI-enable booking but adoption lags.", "Preference drift toward direct brand booking for some products during holidays; nonetheless, OTAs still dominate online lodging booking share."],
+    "opportunity_insight": "Win where OTAs are weakest: trusted curation + live support, and compress the ‘inspiration-to-booking’ gap native to Gen Z social behaviors."
+  },
+
+  "3_feasibility_and_risk": {
+    "regulatory_and_compliance_risks": ["Seller of Travel registration/bonding in CA, FL (incl. independent agent filings), HI, WA; display requirements.", "DOT 2024–2026 refund rules: ticket agents must refund promptly upon request when flights are canceled/changed; ensure workflows and disclosures comply.", "If packaging = potential ‘organizer’ liability (EU-style obligations when selling into EU jurisdictions); use vetted operators/DMCs and appropriate contracts.", "E&O insurance cost creep and host-agency policy gaps; PCI/data privacy for payments."],
+    "execution_constraints": ["Supplier accreditation/consortia access (or host dependency)", "High-touch service model increases labor per trip; need automation without losing human feel", "Seasonality of demand and IRROPS surge load", "Acquiring creators/communities with positive unit economics"],
+    "critical_dependencies": ["Reliable host/consortia (rates, amenities, air desk)", "24/7 support partners (after-hours air ops)", "Creator/community partners for demand", "AI itinerary and CRM stack integrated with booking rails"],
+    "risk_insight": "Regulatory and ops risks are manageable via host alignment and narrow trip scope at launch; the bigger risk is CAC>gross margin without a repeatable social-to-booking funnel."
+  },
+
+  "4_product_and_strategy": {
+    "mvp_wedge": { "wedge": "Gen Z-friendly ‘Advisor-in-your-pocket’: DM-to-itinerary within 24 hours for 5-night urban/culture trips to EU/Mex/Caribbean, with transparent planning fee and 24/7 disruption support.", "why_it_validates_fast": "Short cycles, repeatable SKUs, measurable conversion from social DMs; limited supplier set allows perks and SLA guarantees.", "who_its_for": "U.S.-based Gen Z couples/friends booking $1.5k–$3.5k pp trips, mobile-first, socially inspired.", "what_it_excludes": ["RTW/RTWgap-year, complex multi-country >10 nights", "Ultra-budget backpacking, points-only bookings", "Corporate travel management", "Custom safaris/expeditions (until later)"] },
+    "unique_advantage_hypotheses": ["Social-to-booking rails: link-in-bio trip builders + instant holds + fee checkout in <5 minutes.", "Creator collabs with pre-bundled micro-itineraries; affiliate revenue + higher conversion.", "AI-assisted curation trained on our supplier notes + traveler prefs; human QA within 24 hours.", "Disruption guarantee: proactive rebooking per DOT rules; peace-of-mind as a product."],
+    "growth_levers": ["TikTok/IG creators with revenue share and co-branded itineraries", "Referral loops: give-perk/get-perk for friend invites", "Narrow destinations with strong consortia perks (VIP amenities increase close rates)", "Content SEO on ‘where to go for X vibe’ + UGC trip recaps", "Group departures with community leaders (TrovaTrip-style partners)"],
+    "strategy_insight": "Treat the advisor as a product: fast response, modular fees, mobile-native UX, visible perks, and reliable rescue. Start with a tight lane to raise NPS and margins, then expand SKUs."
+  },
+
+  "5_market_readiness_and_validation": {
+    "pmf_readiness": { "assessment": "borderline", "why": ["Demand and intent are strong; advisor channel at records; Gen Z shows willingness to use humans when value is clear.", "Behavioral fit (social-led, mobile, AI-assisted) aligns with product vision.", "Risk: converting preference into paid planning fees at scale; need proof on CAC:LTV from creator channels."] },
+    "market_size_reality_check": {
+      "tam_usd_per_year": "$15B–$25B (U.S. Gen Z leisure bookings that could flow via advisors/curated intermediaries, including commissions+fees).",
+      "sam_usd_per_year": "$1.5B–$3.0B (U.S. Gen Z outbound to EU/Mex/Caribbean, 4–9 night trips, using advisors; assumes 10–15% of Gen Z travelers buy via advisors, avg booking value $2.5k–$4k pp, 2 travelers).",
+      "som_usd_per_year_1_to_3_years": "$15M–$60M gross bookings; $2.5M–$9M net revenue (commissions+fees), assuming 6–18k travelers/year at $2.5k–$3.5k pp, take rate 14–16% + fees.",
+      "assumptions": ["U.S. Gen Z pop ~68–72M; ~30–40M traveling annually; 10–20% advisor-amenable in next 3 years (preference > actual).", "Avg trip budget Gen Z $1.5k–$3.5k pp; 1–2 advisor-suitable trips/year per buyer.", "Blended take rate 12–16% commissions + $150–$300 average fee where applied."] },
+    "adoption_and_behavior_signals": ["Agency-channel air hit ~$100B+ in 2024–2025; NDC penetration ~20%+ creating complexity that benefits advisors.", "Social discovery among U.S. travelers up (≈19% in 2025), with Gen Z highest.", "AI usage for travel planning ~15–39% and rising; Gen Z comfortable booking on mobile; creator-led group travel demand skewed to Gen Z/Millennials (≈84% of respondents)."],
+    "revenue_potential": { "near_term_12mo": "$0.8M–$2.5M net revenue", "long_term_3yr": "$3M–$9M net revenue", "assumptions": ["Year 1: 1,200–3,500 travelers; AOV $2.7k pp; take rate 15%; 40–60% planning fee attach at $150 avg.", "Year 3: 6,000–12,000 travelers via creators + referrals; improved attach and upsells (tours, insurance)."] },
+    "readiness_insight": "Market is receptive; success hinges on proving a low-CAC creator/UGC engine and operational excellence during disruptions."
+  },
+
+  "6_swot": {
+    "strengths": ["Founder-market fit in social/mobile UX", "Narrow destination focus enables perks and SLAs", "AI-assisted ops speeds response times"],
+    "weaknesses": ["Low initial brand trust vs major OTAs", "Labor intensity of high-touch planning", "Regulatory overhead across states if scaling direct merchant model"],
+    "opportunities": ["Creator-led departures and micro-communities", "NDC/ancillary complexity steering DIY travelers to advisors", "Upsell insurance, activities, and VIP amenities to lift take rate"],
+    "threats": ["OTAs improving service and social commerce", "Host/consortia dependency and fee creep", "Regulatory changes on refunds/consumer protections increasing liability"],
+    "swot_insight": "Differentiation lives in service speed, disruption guarantees, and social-native funnels—areas incumbents under-serve."
+  },
+
+  "key_metrics": [
+    { "metric": "U.S. agency-channel air sales", "value": "$100.4B", "year": "2025", "geo": "U.S.", "notes": "Record; growth +1% YoY" },
+    { "metric": "NDC share of ARC-settled transactions (Dec)", "value": "≈21%", "year": "2025", "geo": "U.S.", "notes": "↑ from ~20% in 2024" },
+    { "metric": "U.S. travel agencies market size (industry revenue)", "value": "$46.4B", "year": "2025", "geo": "U.S.", "notes": "NAICS 56151" },
+    { "metric": "Advisors charging professional fees", "value": ">50%", "year": "2023–2025", "geo": "U.S.", "notes": "Common fee $100–$300; higher for complex" },
+    { "metric": "Gen Z/Millennials preferring human advisors (survey)", "value": "~38%", "year": "2023–2024", "geo": "U.S.", "notes": "Preference > actual use" },
+    { "metric": "AI used for travel planning (travelers)", "value": "~15–39%", "year": "2024–2025", "geo": "U.S.", "notes": "Higher intent than transactions; Gen Z leads" },
+    { "metric": "Social used in trip research (all travelers)", "value": "~19%", "year": "2025", "geo": "U.S.", "notes": "Up from ~16% in 2023; Gen Z highest" },
+    { "metric": "Avg 2025 vacation budget", "value": "~$5,051", "year": "2025", "geo": "U.S.", "notes": "All adults; Gen Z likely lower" },
+    { "metric": "Creator-led travel demographics", "value": "Gen Z+Millennials ≈84%", "year": "2025", "geo": "Global/U.S.-skewed", "notes": "TrovaTrip survey base" },
+    { "metric": "Independent advisor earnings snapshot", "value": "Avg income ~$71k; 22% earn $100k+", "year": "2024", "geo": "U.S.", "notes": "Experienced independents" }
+  ],
+  "validation_plan": [
+    { "experiment": "TikTok/IG DM-to-itinerary funnel smoke test", "hypothesis": "Gen Z will pay $150 planning fee for 5–7 night Mexico/EU city trips with 24h turnaround", "method": "Creator whitelisting + link-in-bio Typeform + Stripe fee checkout + 5 pre-negotiated itineraries", "success_metric": "≥3% click-to-fee, CAC/NR < 1.0, ≥60% fee-to-book", "timebox": "3–4 weeks", "est_cost_usd": "$12–20k" },
+    { "experiment": "Disruption guarantee A/B", "hypothesis": "‘We rebook you in <30 min’ increases conversion and WTP", "method": "Two landing pages; measure fee attach and close rate", "success_metric": "+20% fee attach; +10% close", "timebox": "3 weeks", "est_cost_usd": "$5–8k" },
+    { "experiment": "Creator group micro-departure", "hypothesis": "Creator-hosted small group (10–14 pax) yields CAC <$120/pax and NPS > 70", "method": "Partner with 2 mid-tier creators; pre-bundled dates", "success_metric": "Sell-out in <21 days; margin ≥15%", "timebox": "8–10 weeks", "est_cost_usd": "$10–18k" },
+    { "experiment": "AI-assisted itinerary ops", "hypothesis": "AI assistant cuts planning time by 40% without hurting NPS", "method": "Internal AI tooling; time-and-motion + CSAT tracking", "success_metric": "≥35% time savings; NPS ≥ 70", "timebox": "6 weeks", "est_cost_usd": "$3–6k" },
+    { "experiment": "Pricing test: fee ladder", "hypothesis": "Tiered fees ($0, $99, $249) maximize net margin and reduce tire-kickers", "method": "Randomized fee display by complexity", "success_metric": "Net margin/trip ↑ ≥10%; ghosting ↓ ≥25%", "timebox": "4 weeks", "est_cost_usd": "$0–2k" },
+    { "experiment": "Fast falsifier: cold traffic CAC", "hypothesis": "We can’t profitably acquire without creators", "method": "Run non-creator paid social; measure CAC/NR", "success_metric": "If CAC/NR > 1.5 after 2 weeks → pivot heavier to creators/referrals", "timebox": "2 weeks", "est_cost_usd": "$8–12k" },
+    { "experiment": "Fast falsifier: fee aversion", "hypothesis": "Gen Z refuses planning fees at MVP price point", "method": "Offer fee waiver control cohort", "success_metric": "If waiver yields <5% uplift in close, keep fees; if >20%, revisit pricing/packaging", "timebox": "3 weeks", "est_cost_usd": "$2–4k" }
+  ],
+  "top_growth_gaps_to_exploit": ["Social-to-booking gap with instant holds and fee checkout", "Disruption support as a productized guarantee", "Creator/community-led departures with built-in trust", "AI-accelerated planning to deliver 24h turnaround"],
+  "top_risks_to_mitigate_first": ["CAC creep on paid social; over-reliance on one creator", "Host/consortia dependence and unfavorable fee splits", "Regulatory compliance across state SOT laws and DOT refund obligations", "Ops overload during irregular operations (need 24/7 partners)"],
+  "open_questions": ["What fee and perk combo maximizes Gen Z conversion without eroding commission economics?", "Which creator verticals (food, outdoor, fashion, wellness) yield best CAC:LTV?", "Which destination triad delivers highest close rate and fewest IRROPS (e.g., Mexico/Caribbean vs EU city pairs)?", "What SLAs (response, rebooking time) most impact NPS and referrals?", "How much AI can we surface to users without reducing perceived human value?"]
+}

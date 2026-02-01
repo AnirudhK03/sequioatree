@@ -1,18 +1,23 @@
 "use client";
 
-import { useState, useCallback, useMemo } from "react";
+import { useEffect, useMemo, useState, useCallback } from "react";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import { MetricCardData } from "./components/MetricCard";
 import ExpandedCard from "./components/ExpandedCard";
 import HeroSection from "./components/HeroSection";
 import ResultsSection from "./components/ResultsSection";
 import SequoiaLogo from "./components/SequoiaLogo";
-import { useTypewriter } from "./hooks/useTypewriter";
+import { usePhasedText } from "./hooks/usePhasedText";
 import { MOCK_API_RESPONSE, apiResponseToCards } from "./data/cards";
+import { useNotes } from "./components/NotesContext";
 
 export default function Home() {
+  const { notesText, annotations, setButtonVisible } = useNotes();
+
   const [prompt, setPrompt] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [runId, setRunId] = useState(0);
+  const [runMode, setRunMode] = useState<"submit" | "refine">("submit");
   const [expandedCard, setExpandedCard] = useState<MetricCardData | null>(null);
 
   // When the real API is wired up, replace MOCK_API_RESPONSE with the
@@ -22,12 +27,44 @@ export default function Home() {
     [],
   );
 
-  const { displayed: aiText, done: typingDone } = useTypewriter(aiResponse, submitted);
+  // Status text that cycles while "thinking".
+  const { text: aiText, done: typingDone } = usePhasedText(
+    submitted,
+    [
+      "Aggregating data resources....",
+      "Assessing idea viability...",
+      "Assessing market viability...",
+      "Consolidated results",
+    ],
+    { stepMs: 2000, finalHoldMs: 2000, resetKey: runId },
+  );
 
   const handleSubmit = useCallback(() => {
     if (!prompt.trim()) return;
+    setRunMode("submit");
     setSubmitted(true);
+    setExpandedCard(null);
+    setRunId((id) => id + 1);
   }, [prompt]);
+
+  const handleRefine = useCallback(() => {
+    if (!prompt.trim()) return;
+    setRunMode("refine");
+    setSubmitted(true);
+    setExpandedCard(null);
+    setRunId((id) => id + 1);
+  }, [prompt]);
+
+  const refining = runMode === "refine" && submitted && !typingDone;
+
+  const hasNotesOrAnnotations = notesText.trim().length > 0 || annotations.length > 0;
+  const showRefine = submitted && typingDone && hasNotesOrAnnotations;
+
+  useEffect(() => {
+    // Hide Notes button on the first landing screen, but surface it once
+    // results exist or if the user already has saved notes/annotations.
+    setButtonVisible(submitted || hasNotesOrAnnotations);
+  }, [hasNotesOrAnnotations, setButtonVisible, submitted]);
 
   const marketCards = cards.filter((c) => c.category === "market");
   const ideaCards = cards.filter((c) => c.category === "idea");
@@ -58,6 +95,9 @@ export default function Home() {
           setPrompt={setPrompt}
           submitted={submitted}
           onSubmit={handleSubmit}
+          onRefine={handleRefine}
+          refining={refining}
+          showRefine={showRefine}
         />
 
         <AnimatePresence>

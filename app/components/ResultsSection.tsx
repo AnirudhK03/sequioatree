@@ -53,9 +53,20 @@ export default function ResultsSection({
       >
         <div className="flex items-start gap-3">
           <div className="w-6 h-6 rounded-full bg-black/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
-              <circle cx="6" cy="6" r="2" />
-              <circle cx="6" cy="6" r="5" fill="none" stroke="currentColor" strokeWidth="1" />
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 2c-2.8 2.2-4.5 5-4.5 7.6 0 3.1 2.2 5.4 4.5 5.4s4.5-2.3 4.5-5.4C16.5 7 14.8 4.2 12 2Z" />
+              <path d="M12 15v7" />
+              <path d="M8 22h8" />
             </svg>
           </div>
           <p className="text-sm leading-relaxed text-gray-700 max-w-2xl">
@@ -85,8 +96,7 @@ export default function ResultsSection({
               <motion.h2
                 className="text-2xl font-bold text-center mb-8"
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
                 Idea Validation
@@ -96,12 +106,11 @@ export default function ResultsSection({
                   <motion.h3
                     className="text-xs font-mono uppercase tracking-widest text-gray-400 mb-3"
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1 }}
                   >
                     {group.subcategory}
                   </motion.h3>
-                  <div className="grid grid-cols-2 gap-3 auto-rows-[11rem]">
+                  <div className="grid grid-cols-2 gap-3 auto-rows-[12rem]">
                     {group.cards.map((card, i) => (
                       <div key={card.id} className="col-span-1">
                         <div className="h-full">
@@ -123,8 +132,7 @@ export default function ResultsSection({
               <motion.h2
                 className="text-2xl font-bold text-center mb-8"
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
                 Market Validation
@@ -134,12 +142,11 @@ export default function ResultsSection({
                   <motion.h3
                     className="text-xs font-mono uppercase tracking-widest text-gray-400 mb-3"
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1 }}
                   >
                     {group.subcategory}
                   </motion.h3>
-                  <div className="grid grid-cols-2 gap-3 auto-rows-[11rem]">
+                  <div className="grid grid-cols-2 gap-3 auto-rows-[12rem]">
                     {group.cards.map((card, i) => (
                       <div key={card.id} className="col-span-1">
                         <div className="h-full">

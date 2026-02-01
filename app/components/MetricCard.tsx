@@ -28,7 +28,7 @@ export type MetricCardData = {
 function BarChart() {
   const bars = [0.3, 0.5, 0.4, 0.7, 0.6, 0.85, 0.75, 0.9];
   return (
-    <div className="flex items-end gap-1.5 h-16 mt-2">
+    <div className="flex items-end gap-1.5 h-14 md:h-16 mt-2">
       {bars.map((h, i) => (
         <motion.div
           key={i}
@@ -114,6 +114,14 @@ function CountUp({ value, suffix = "" }: { value: string; suffix?: string }) {
   );
 }
 
+function valueTextClass(value: string) {
+  const len = value.trim().length;
+  if (len >= 14) return "text-xl md:text-2xl";
+  if (len >= 10) return "text-2xl md:text-3xl";
+  if (len >= 8) return "text-3xl md:text-4xl";
+  return "text-4xl md:text-5xl";
+}
+
 export default function MetricCard({
   card,
   index,
@@ -123,16 +131,18 @@ export default function MetricCard({
   index: number;
   onClick: () => void;
 }) {
+  const valueClass = `${valueTextClass(card.value)} font-bold tracking-tighter leading-[0.95] break-words min-w-0`;
+
   const cardContent: Record<string, ReactNode> = {
     metric: (
-      <div className="flex flex-col justify-between h-full p-5">
+      <div className="flex flex-col justify-between h-full min-h-0 p-5">
         <div className="flex items-center gap-2">
           <span className="text-xs font-mono px-3 py-1 rounded-full border border-current/20 bg-white/30">
             {card.label}
           </span>
           <span className="text-xs opacity-50">+</span>
         </div>
-        <span className="text-6xl md:text-7xl font-bold tracking-tighter leading-none mt-auto">
+        <span className={`${valueClass} mt-auto`}>
           {card.value}
         </span>
       </div>
@@ -146,20 +156,20 @@ export default function MetricCard({
       />
     ),
     testimonial: (
-      <div className="flex flex-col justify-between h-full p-5">
+      <div className="flex flex-col justify-between h-full min-h-0 p-5">
         <div className="flex items-center gap-2">
           <span className="text-xs font-mono px-3 py-1 rounded-full border border-current/20 bg-white/30">
             {card.author}
           </span>
           <span className="text-xs opacity-50">+</span>
         </div>
-        <p className="text-sm leading-relaxed mt-4 font-medium">
+        <p className="text-sm leading-relaxed mt-4 font-medium overflow-hidden">
           &ldquo;{card.quote}&rdquo;
         </p>
       </div>
     ),
     "chart-bar": (
-      <div className="flex flex-col justify-between h-full p-5">
+      <div className="flex flex-col justify-between h-full min-h-0 p-5">
         <div className="flex items-center gap-2">
           <span className="text-xs font-mono px-3 py-1 rounded-full border border-current/20 bg-white/30">
             {card.label}
@@ -167,13 +177,13 @@ export default function MetricCard({
           <span className="text-xs opacity-50">+</span>
         </div>
         <div className="mt-auto">
-          <span className="text-5xl md:text-6xl font-bold tracking-tighter">{card.value}</span>
+          <span className={valueClass}>{card.value}</span>
           <BarChart />
         </div>
       </div>
     ),
     "chart-ring": (
-      <div className="flex flex-col items-center justify-between h-full p-5">
+      <div className="flex flex-col items-center justify-between h-full min-h-0 p-5">
         <div className="flex items-center gap-2 self-start">
           <span className="text-xs font-mono px-3 py-1 rounded-full border border-current/20 bg-white/30">
             {card.label}
@@ -187,7 +197,7 @@ export default function MetricCard({
       </div>
     ),
     "chart-progress": (
-      <div className="flex flex-col justify-between h-full p-5">
+      <div className="flex flex-col justify-between h-full min-h-0 p-5">
         <div className="flex items-center gap-2">
           <span className="text-xs font-mono px-3 py-1 rounded-full border border-current/20 bg-white/30">
             {card.label}
@@ -196,7 +206,7 @@ export default function MetricCard({
         </div>
         <div className="mt-auto">
           <ProgressBars />
-          <span className="text-5xl md:text-6xl font-bold tracking-tighter mt-2 block">
+          <span className={`${valueClass} mt-2 block`}>
             {card.value}
           </span>
         </div>
@@ -207,7 +217,7 @@ export default function MetricCard({
   return (
     <motion.div
       layoutId={`card-${card.id}`}
-      className="rounded-2xl cursor-pointer overflow-hidden h-full"
+      className="rounded-2xl cursor-pointer overflow-hidden h-full min-w-0"
       style={{ backgroundColor: card.color, color: card.textColor || "#171717" }}
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}

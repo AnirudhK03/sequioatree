@@ -32,6 +32,17 @@ export default function ExpandedCard({
     return { cardId: card.id, cardLabel: card.label, cardValue: card.value };
   }, [card]);
 
+  const safeDetail = useMemo(() => {
+    const detail = (card as any)?.detail;
+    const points = Array.isArray(detail?.points) ? detail.points : [];
+    return {
+      title: typeof detail?.title === "string" ? detail.title : "",
+      summary: typeof detail?.summary === "string" ? detail.summary : "",
+      points,
+      source: typeof detail?.source === "string" ? detail.source : "",
+    };
+  }, [card]);
+
   const clearSelection = useCallback(() => {
     setSelection(null);
     const sel = window.getSelection();
@@ -185,7 +196,7 @@ export default function ExpandedCard({
                   {card.value}
                 </h2>
                 <h3 className="text-xl font-semibold mb-4">
-                  {card.detail.title}
+                  {safeDetail.title}
                 </h3>
 
                 <motion.p
@@ -194,7 +205,7 @@ export default function ExpandedCard({
                   animate={{ opacity: 0.8, y: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  {card.detail.summary}
+                  {safeDetail.summary}
                 </motion.p>
 
                 <motion.div
@@ -203,7 +214,7 @@ export default function ExpandedCard({
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
                 >
-                  {card.detail.points.map((point, i) => (
+                  {safeDetail.points.map((point: string, i: number) => (
                     <motion.div
                       key={i}
                       className="flex items-start gap-3 text-sm"
@@ -223,7 +234,7 @@ export default function ExpandedCard({
                   animate={{ opacity: 0.5 }}
                   transition={{ delay: 0.5 }}
                 >
-                  Source: {card.detail.source}
+                  Source: {safeDetail.source}
                 </motion.p>
               </div>
             </motion.div>

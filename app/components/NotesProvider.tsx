@@ -24,48 +24,26 @@ export default function NotesProvider({ children }: { children: ReactNode }) {
     const [annotations, setAnnotations] = useState<Annotation[]>([]);
     const [activeAnnotationId, setActiveAnnotationId] = useState<string | null>(null);
 
-    // Load from localStorage (with legacy migration)
+    // Always start with a clean slate on refresh.
     useEffect(() => {
         try {
-            const storedText = window.localStorage.getItem(STORAGE_TEXT_KEY);
-            if (storedText != null) {
-                setNotesTextState(storedText);
-            } else {
-                const legacy = window.localStorage.getItem(LEGACY_STORAGE_KEY);
-                if (legacy != null) {
-                    setNotesTextState(legacy);
-                    window.localStorage.setItem(STORAGE_TEXT_KEY, legacy);
-                }
-            }
-
-            const storedAnnotations = window.localStorage.getItem(STORAGE_ANNOTATIONS_KEY);
-            if (storedAnnotations != null) {
-                const parsed = JSON.parse(storedAnnotations) as Annotation[];
-                if (Array.isArray(parsed)) setAnnotations(parsed);
-            }
+            window.localStorage.removeItem(STORAGE_TEXT_KEY);
+            window.localStorage.removeItem(STORAGE_ANNOTATIONS_KEY);
+            window.localStorage.removeItem(LEGACY_STORAGE_KEY);
         } catch {
-            // ignore storage errors
+            // ignore
         }
+        setNotesTextState("");
+        setAnnotations([]);
+        setActiveAnnotationId(null);
     }, []);
 
     const setNotesText = useCallback((text: string) => {
         setNotesTextState(text);
-        try {
-            window.localStorage.setItem(STORAGE_TEXT_KEY, text);
-            // keep legacy key updated so existing behavior still works if referenced
-            window.localStorage.setItem(LEGACY_STORAGE_KEY, text);
-        } catch {
-            // ignore
-        }
     }, []);
 
     const persistAnnotations = useCallback((next: Annotation[]) => {
         setAnnotations(next);
-        try {
-            window.localStorage.setItem(STORAGE_ANNOTATIONS_KEY, JSON.stringify(next));
-        } catch {
-            // ignore
-        }
     }, []);
 
     const addAnnotation = useCallback(

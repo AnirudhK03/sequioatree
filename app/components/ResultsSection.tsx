@@ -10,6 +10,7 @@ interface ResultsSectionProps {
   marketCards: MetricCardData[];
   ideaCards: MetricCardData[];
   onCardClick: (card: MetricCardData) => void;
+  refinementText?: string | null;
 }
 
 function groupBySubcategory(cards: MetricCardData[]) {
@@ -32,6 +33,7 @@ export default function ResultsSection({
   marketCards,
   ideaCards,
   onCardClick,
+  refinementText,
 }: ResultsSectionProps) {
   const ideaGroups = groupBySubcategory(ideaCards);
   const marketGroups = groupBySubcategory(marketCards);
@@ -69,8 +71,8 @@ export default function ResultsSection({
               <path d="M8 22h8" />
             </svg>
           </div>
-          <p className="text-sm leading-relaxed text-gray-700 max-w-2xl">
-            {aiText}
+          <p className="text-sm leading-relaxed text-gray-700 max-w-2xl whitespace-pre-wrap">
+            {typingDone && refinementText ? refinementText : aiText}
             {!typingDone && (
               <motion.span
                 className="inline-block w-0.5 h-4 bg-gray-700 ml-0.5 align-middle"

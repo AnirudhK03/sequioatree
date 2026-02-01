@@ -4,17 +4,17 @@
     {
       "id": "1",
       "label": "Pain Severity",
-      "value": "High information overload + disruption anxiety.",
-      "type": "chart-ring",
+      "value": "Planning is overwhelming and disruptions are stressful.",
+      "type": "metric",
       "category": "idea",
       "subcategory": "Problem & Demand",
       "detail": {
-        "title": "Pain Severity for Gen Z Travelers",
-        "summary": "Gen Z seeks curated experiences and support during travel disruptions.",
+        "title": "How Painful Is This for Gen Z?",
+        "summary": "Gen Z feels overloaded when planning trips and especially anxious when things go wrong mid-travel.",
         "points": [
-          "U.S. agency-channel air sales projected at ~$100.4B in 2025.",
-          "8 in 10 U.S. adults plan to vacation in the next 12 months.",
-          "Social discovery in trip research is rising, especially among Gen Z."
+          "People jump between TikTok, Google, and booking sites trying to piece together a good trip.",
+          "When flights are canceled or plans fall apart, users feel stuck and don’t know what to do.",
+          "These stressful moments are when people most want real help, not just another app."
         ],
         "source": "Prior context"
       }
@@ -22,17 +22,17 @@
     {
       "id": "2",
       "label": "Problem Frequency",
-      "value": "Trip planning occurs multiple times/year.",
+      "value": "Happens a few times every year.",
       "type": "metric",
       "category": "idea",
       "subcategory": "Problem & Demand",
       "detail": {
-        "title": "Frequency of Trip Planning",
-        "summary": "Gen Z travelers frequently engage in trip planning.",
+        "title": "How Often Does This Happen?",
+        "summary": "Trip planning isn’t constant, but it happens often enough to form habits.",
         "points": [
-          "Median of 3-4 trips per year.",
-          "Research loops across social media, search, and OTAs.",
-          "Common disruptions require support."
+          "Most Gen Z travelers take around 3–5 trips a year.",
+          "Each trip triggers hours or days of research across different platforms.",
+          "Travel problems tend to repeat, so people remember who helped them last time."
         ],
         "source": "Prior context"
       }
@@ -45,12 +45,12 @@
       "category": "idea",
       "subcategory": "Problem & Demand",
       "detail": {
-        "title": "Agency-Channel Market Size",
-        "summary": "The U.S. travel agency market is significant and growing.",
+        "title": "People Already Spend a Lot on This",
+        "summary": "This isn’t a new behavior — people already pay for help with travel.",
         "points": [
-          "Projected revenue of ~$46.9B in 2025.",
-          "Gen Z budgets for group trips average $2,000-$3,000.",
-          "Premium experiences are on the rise."
+          "U.S. travel agencies are expected to make about $46.9B in revenue in 2025.",
+          "Gen Z group trips often cost $2,000–$3,000 per person.",
+          "The challenge isn’t getting people to care about travel — it’s getting them to switch tools."
         ],
         "source": "IBISWorld report (Jan 2026)"
       }
@@ -58,17 +58,17 @@
     {
       "id": "4",
       "label": "Competitive Landscape",
-      "value": "High competition from OTAs and niche agencies.",
+      "value": "Lots of options, mostly feel the same.",
       "type": "metric",
       "category": "market",
       "subcategory": "Market & Competition",
       "detail": {
-        "title": "Market Competition Overview",
-        "summary": "The travel agency market is highly competitive.",
+        "title": "What People Use Today",
+        "summary": "Most people book through big online platforms that focus on price and speed.",
         "points": [
-          "Major players include Expedia, Booking Holdings, and Internova.",
-          "Online platforms dominate with low-cost options.",
-          "Niche agencies focus on personalized services."
+          "Major players include Expedia, Booking.com, Airbnb, and Google Travel.",
+          "These tools are good for finding deals but not for guidance or reassurance.",
+          "Users often feel like they’re on their own when things go wrong."
         ],
         "source": "IBISWorld report (Jan 2026)"
       }
@@ -76,17 +76,17 @@
     {
       "id": "5",
       "label": "Competitive Gaps",
-      "value": "Leaky social-to-booking handoff.",
+      "value": "No trusted guide from discovery to booking.",
       "type": "metric",
       "category": "market",
       "subcategory": "Market & Competition",
       "detail": {
-        "title": "Identified Competitive Gaps",
-        "summary": "Opportunities exist in the social-to-booking transition.",
+        "title": "What’s Missing Today",
+        "summary": "Current tools help people book, but not feel confident.",
         "points": [
-          "Few seamless advisor-native flows from social media to booking.",
-          "Weak real-time support during disruptions.",
-          "Lack of transparent, modular fees for Gen Z."
+          "People discover trips on social media but can’t easily turn that into real plans.",
+          "There’s little real human support when plans fall apart.",
+          "Pricing often feels confusing and unpredictable."
         ],
         "source": "Prior context"
       }
@@ -94,17 +94,17 @@
     {
       "id": "6",
       "label": "Market Dynamics",
-      "value": "Agency channel at record volumes.",
+      "value": "Travel ideas come from social, not search.",
       "type": "metric",
       "category": "market",
       "subcategory": "Market & Competition",
       "detail": {
-        "title": "Current Market Dynamics",
-        "summary": "The travel agency market is evolving rapidly.",
+        "title": "How People Find Trips Now",
+        "summary": "Gen Z gets inspired by creators, not travel ads.",
         "points": [
-          "Social discovery drives demand.",
-          "AI planning tools are gaining traction.",
-          "Direct brand booking preference is rising."
+          "TikTok and Instagram are major sources of travel inspiration.",
+          "People trust recommendations from creators more than brands.",
+          "Booking still happens on old-school platforms that feel disconnected."
         ],
         "source": "Prior context"
       }
@@ -112,17 +112,17 @@
     {
       "id": "7",
       "label": "Regulatory & Compliance Risk",
-      "value": "Low barriers to entry but regulatory complexities exist.",
+      "value": "Some paperwork, but manageable.",
       "type": "metric",
       "category": "idea",
       "subcategory": "Feasibility & Risk",
       "detail": {
-        "title": "Regulatory Landscape Overview",
-        "summary": "Travel agencies face various regulatory challenges.",
+        "title": "What Could Slow This Down",
+        "summary": "Running a travel agency has rules, but nothing unusual.",
         "points": [
-          "Seller of Travel registration required in some states.",
-          "DOT regulations on refunds and disclosures.",
-          "Potential liability for packaging travel services."
+          "Some states require travel sellers to register.",
+          "There are rules around refunds and disclosures.",
+          "Mistakes in bookings can create liability."
         ],
         "source": "Prior context"
       }
@@ -130,17 +130,17 @@
     {
       "id": "8",
       "label": "Execution Constraints",
-      "value": "High-touch service model increases labor costs.",
+      "value": "Hard to scale human help.",
       "type": "metric",
       "category": "idea",
       "subcategory": "Feasibility & Risk",
       "detail": {
-        "title": "Operational Constraints",
-        "summary": "Agencies must balance service quality with costs.",
+        "title": "The Hard Part of Building This",
+        "summary": "People want human help, but humans are expensive.",
         "points": [
-          "Supplier accreditation and consortia access are critical.",
-          "Need for automation without losing personal touch.",
-          "Seasonality impacts demand and operational load."
+          "High-quality service usually means more staff.",
+          "Margins in travel are thin.",
+          "Technology has to reduce workload without losing trust."
         ],
         "source": "Prior context"
       }
@@ -148,17 +148,17 @@
     {
       "id": "9",
       "label": "MVP Wedge",
-      "value": "Advisor-in-your-pocket for Gen Z.",
+      "value": "Help when trips go wrong.",
       "type": "metric",
       "category": "idea",
       "subcategory": "Product & Strategy",
       "detail": {
-        "title": "Minimum Viable Product Strategy",
-        "summary": "Focus on mobile-first, socially inspired travel planning.",
+        "title": "Where to Start",
+        "summary": "Start with the most painful moments.",
         "points": [
-          "24-hour itinerary turnaround for urban trips.",
-          "Transparent planning fees and disruption support.",
-          "Targeting U.S.-based Gen Z couples and friends."
+          "Flight cancellations and missed connections.",
+          "Chat-based help instead of long call centers.",
+          "Focus on short, common trips first."
         ],
         "source": "Prior context"
       }
@@ -166,17 +166,17 @@
     {
       "id": "10",
       "label": "Unique Advantage",
-      "value": "Social-to-booking integration.",
+      "value": "Built for social-native travelers.",
       "type": "metric",
       "category": "idea",
       "subcategory": "Product & Strategy",
       "detail": {
-        "title": "Unique Selling Proposition",
-        "summary": "Leverage social media for seamless booking.",
+        "title": "Why This Could Work",
+        "summary": "This product lives where Gen Z already is.",
         "points": [
-          "Link-in-bio trip builders for instant holds.",
-          "Creator collaborations for bundled itineraries.",
-          "AI-assisted curation for personalized experiences."
+          "Trips start from social posts.",
+          "Creators bring trust and attention.",
+          "AI helps scale human-style support."
         ],
         "source": "Prior context"
       }
@@ -184,17 +184,17 @@
     {
       "id": "11",
       "label": "PMF Readiness",
-      "value": "Borderline readiness for product-market fit.",
+      "value": "Promising, but not proven.",
       "type": "chart-progress",
       "category": "idea",
       "subcategory": "Market Readiness & Validation",
       "detail": {
-        "title": "Product-Market Fit Assessment",
-        "summary": "Demand and intent are strong but conversion is a challenge.",
+        "title": "Are People Ready for This?",
+        "summary": "The idea makes sense, but behavior still needs to be tested.",
         "points": [
-          "High willingness to use advisors when value is clear.",
-          "Behavioral fit aligns with product vision.",
-          "Need proof on CAC:LTV from creator channels."
+          "People like the idea of guidance.",
+          "They still default to booking sites.",
+          "The key question is whether they’ll actually switch."
         ],
         "source": "Prior context"
       }
@@ -207,12 +207,12 @@
       "category": "market",
       "subcategory": "Market Sizing",
       "detail": {
-        "title": "Market Size Overview",
-        "summary": "Potential market for Gen Z leisure bookings via advisors.",
+        "title": "How Big Could This Be?",
+        "summary": "The market is large, but hard to win.",
         "points": [
-          "TAM: $15B–$25B for U.S. Gen Z leisure bookings.",
-          "SAM: $1.5B–$3.0B for outbound trips to EU/Mex/Caribbean.",
-          "SOM: $15M–$60M gross bookings in the first 1-3 years."
+          "Millions of Gen Z travelers book trips every year.",
+          "Most money already flows through big platforms.",
+          "Winning even a small share could be meaningful."
         ],
         "source": "Prior context"
       }
@@ -220,18 +220,18 @@
     {
       "id": "13",
       "label": "SWOT Overview",
-      "value": "Strengths and weaknesses identified.",
+      "value": "Clear need, tough competition.",
       "type": "chart-bar",
       "category": "market",
       "subcategory": "SWOT",
       "detail": {
-        "title": "SWOT Analysis Overview",
-        "summary": "Strengths and weaknesses of the travel agency landscape.",
+        "title": "Reality Check",
+        "summary": "This is more about trust and habits than technology.",
         "points": [
-          "Strengths: High profit margins, low customer concentration.",
-          "Weaknesses: High competition, low barriers to entry.",
-          "Opportunities: High revenue growth potential.",
-          "Threats: Increasing competition from OTAs."
+          "Strength: people feel lost planning trips.",
+          "Weakness: switching tools is hard.",
+          "Opportunity: become the trusted travel helper.",
+          "Threat: big platforms can copy features."
         ],
         "source": "Prior context"
       }

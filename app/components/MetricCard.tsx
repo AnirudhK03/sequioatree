@@ -116,9 +116,9 @@ function CountUp({ value, suffix = "" }: { value: string; suffix?: string }) {
 
 function valueTextClass(value: string) {
   const len = value.trim().length;
-  if (len >= 14) return "text-xl md:text-2xl";
-  if (len >= 10) return "text-2xl md:text-3xl";
-  if (len >= 8) return "text-3xl md:text-4xl";
+  if (len >= 22) return "text-xl md:text-2xl";
+  if (len >= 16) return "text-2xl md:text-3xl";
+  if (len >= 10) return "text-3xl md:text-4xl";
   return "text-4xl md:text-5xl";
 }
 
@@ -131,7 +131,8 @@ export default function MetricCard({
   index: number;
   onClick: () => void;
 }) {
-  const valueClass = `${valueTextClass(card.value)} font-bold tracking-tighter leading-[0.95] break-words min-w-0`;
+  const valueClass = `${valueTextClass(card.value)} font-bold tracking-tight leading-tight break-words min-w-0 block clamp-3`;
+  const isLongValue = card.value.trim().length > 10 || card.value.includes(" ");
 
   const cardContent: Record<string, ReactNode> = {
     metric: (
@@ -192,8 +193,17 @@ export default function MetricCard({
         </div>
         <div className="relative flex items-center justify-center mt-2">
           <RingChart value={4.8} />
-          <span className="absolute text-3xl font-bold">{card.value}</span>
+          {!isLongValue && (
+            <span className="absolute text-2xl md:text-3xl font-bold text-center px-2 clamp-2">
+              {card.value}
+            </span>
+          )}
         </div>
+        {isLongValue && (
+          <div className="w-full mt-2 text-base font-semibold leading-snug text-center clamp-3">
+            {card.value}
+          </div>
+        )}
       </div>
     ),
     "chart-progress": (

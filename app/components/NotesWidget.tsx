@@ -130,7 +130,7 @@ export default function NotesWidget() {
                             <div className="flex items-center justify-between px-5 py-4 border-b border-black/10">
                                 <div className="flex flex-col">
                                     <span className="text-sm font-semibold">Notes</span>
-                                    <span className="text-xs opacity-60">Saved locally in this browser</span>
+                                    <span className="text-xs opacity-60">Cleared on refresh</span>
                                 </div>
 
                                 <div className="flex items-center gap-2">

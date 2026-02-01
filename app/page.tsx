@@ -56,6 +56,7 @@ export default function Home() {
   }, [prompt]);
 
   const refining = runMode === "refine" && submitted && !typingDone;
+  const thinking = submitted && !typingDone;
 
   const hasNotesOrAnnotations = notesText.trim().length > 0 || annotations.length > 0;
   const showRefine = submitted && typingDone && hasNotesOrAnnotations;
@@ -98,6 +99,7 @@ export default function Home() {
           onRefine={handleRefine}
           refining={refining}
           showRefine={showRefine}
+          thinking={thinking}
         />
 
         <AnimatePresence>

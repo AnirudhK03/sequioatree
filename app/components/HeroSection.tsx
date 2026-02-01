@@ -10,6 +10,7 @@ interface HeroSectionProps {
   onRefine: () => void;
   refining: boolean;
   showRefine: boolean;
+  thinking: boolean;
 }
 
 export default function HeroSection({
@@ -20,6 +21,7 @@ export default function HeroSection({
   onRefine,
   refining,
   showRefine,
+  thinking,
 }: HeroSectionProps) {
   const { scrollY } = useScroll();
   const bgY = useTransform(scrollY, [0, 600], [0, 200]);
@@ -88,16 +90,24 @@ export default function HeroSection({
               placeholder="Enter your idea, context, experience, ..."
               rows={submitted ? 1 : 3}
               value={prompt}
-              onChange={(e) => setPrompt(e.target.value)}
+              onChange={(e) => {
+                if (thinking) return;
+                setPrompt(e.target.value);
+              }}
               onKeyDown={(e) => {
+                if (thinking) {
+                  e.preventDefault();
+                  return;
+                }
                 if (e.key === "Enter" && !e.shiftKey) {
                   e.preventDefault();
                   onSubmit();
                 }
               }}
+              readOnly={thinking}
             />
             <AnimatePresence>
-              {prompt.trim() && (
+              {prompt.trim() && !thinking && (
                 <motion.div
                   className="flex justify-end px-4 pb-3"
                   initial={{ opacity: 0, height: 0 }}
@@ -129,22 +139,6 @@ export default function HeroSection({
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                         >
-                          <motion.span
-                            className="absolute inset-0"
-                            style={{
-                              background:
-                                "linear-gradient(90deg, transparent, rgba(0,0,0,0.08), transparent)",
-                            }}
-                            initial={{ x: "-120%" }}
-                            animate={{ x: refining ? "120%" : "-120%" }}
-                            transition={
-                              refining
-                                ? { duration: 1.1, repeat: Infinity, ease: "easeInOut" }
-                                : { duration: 0 }
-                            }
-                            aria-hidden="true"
-                          />
-
                           <span className="relative inline-flex items-center gap-2">
                             <svg
                               width="16"
@@ -163,24 +157,6 @@ export default function HeroSection({
                             </svg>
 
                             <span>Refine</span>
-
-                            <span className="inline-flex items-center gap-0.5" aria-hidden="true">
-                              <motion.span
-                                className="w-1 h-1 rounded-full bg-current"
-                                animate={{ opacity: refining ? [0.2, 1, 0.2] : 0 }}
-                                transition={{ duration: 1.0, repeat: Infinity, ease: "easeInOut" }}
-                              />
-                              <motion.span
-                                className="w-1 h-1 rounded-full bg-current"
-                                animate={{ opacity: refining ? [0.2, 1, 0.2] : 0 }}
-                                transition={{ duration: 1.0, repeat: Infinity, ease: "easeInOut", delay: 0.15 }}
-                              />
-                              <motion.span
-                                className="w-1 h-1 rounded-full bg-current"
-                                animate={{ opacity: refining ? [0.2, 1, 0.2] : 0 }}
-                                transition={{ duration: 1.0, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-                              />
-                            </span>
                           </span>
                         </motion.button>
                       )}

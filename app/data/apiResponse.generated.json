@@ -1,0 +1,240 @@
+{
+  "aiResponse": null,
+  "cards": [
+    {
+      "id": "1",
+      "label": "Pain Severity",
+      "value": "High information overload + disruption anxiety.",
+      "type": "chart-ring",
+      "category": "idea",
+      "subcategory": "Problem & Demand",
+      "detail": {
+        "title": "Pain Severity for Gen Z Travelers",
+        "summary": "Gen Z seeks curated experiences and support during travel disruptions.",
+        "points": [
+          "U.S. agency-channel air sales projected at ~$100.4B in 2025.",
+          "8 in 10 U.S. adults plan to vacation in the next 12 months.",
+          "Social discovery in trip research is rising, especially among Gen Z."
+        ],
+        "source": "Prior context"
+      }
+    },
+    {
+      "id": "2",
+      "label": "Problem Frequency",
+      "value": "Trip planning occurs multiple times/year.",
+      "type": "metric",
+      "category": "idea",
+      "subcategory": "Problem & Demand",
+      "detail": {
+        "title": "Frequency of Trip Planning",
+        "summary": "Gen Z travelers frequently engage in trip planning.",
+        "points": [
+          "Median of 3-4 trips per year.",
+          "Research loops across social media, search, and OTAs.",
+          "Common disruptions require support."
+        ],
+        "source": "Prior context"
+      }
+    },
+    {
+      "id": "3",
+      "label": "Existing Spend",
+      "value": "$46.9B",
+      "type": "metric",
+      "category": "idea",
+      "subcategory": "Problem & Demand",
+      "detail": {
+        "title": "Agency-Channel Market Size",
+        "summary": "The U.S. travel agency market is significant and growing.",
+        "points": [
+          "Projected revenue of ~$46.9B in 2025.",
+          "Gen Z budgets for group trips average $2,000-$3,000.",
+          "Premium experiences are on the rise."
+        ],
+        "source": "IBISWorld report (Jan 2026)"
+      }
+    },
+    {
+      "id": "4",
+      "label": "Competitive Landscape",
+      "value": "High competition from OTAs and niche agencies.",
+      "type": "metric",
+      "category": "market",
+      "subcategory": "Market & Competition",
+      "detail": {
+        "title": "Market Competition Overview",
+        "summary": "The travel agency market is highly competitive.",
+        "points": [
+          "Major players include Expedia, Booking Holdings, and Internova.",
+          "Online platforms dominate with low-cost options.",
+          "Niche agencies focus on personalized services."
+        ],
+        "source": "IBISWorld report (Jan 2026)"
+      }
+    },
+    {
+      "id": "5",
+      "label": "Competitive Gaps",
+      "value": "Leaky social-to-booking handoff.",
+      "type": "metric",
+      "category": "market",
+      "subcategory": "Market & Competition",
+      "detail": {
+        "title": "Identified Competitive Gaps",
+        "summary": "Opportunities exist in the social-to-booking transition.",
+        "points": [
+          "Few seamless advisor-native flows from social media to booking.",
+          "Weak real-time support during disruptions.",
+          "Lack of transparent, modular fees for Gen Z."
+        ],
+        "source": "Prior context"
+      }
+    },
+    {
+      "id": "6",
+      "label": "Market Dynamics",
+      "value": "Agency channel at record volumes.",
+      "type": "metric",
+      "category": "market",
+      "subcategory": "Market & Competition",
+      "detail": {
+        "title": "Current Market Dynamics",
+        "summary": "The travel agency market is evolving rapidly.",
+        "points": [
+          "Social discovery drives demand.",
+          "AI planning tools are gaining traction.",
+          "Direct brand booking preference is rising."
+        ],
+        "source": "Prior context"
+      }
+    },
+    {
+      "id": "7",
+      "label": "Regulatory & Compliance Risk",
+      "value": "Low barriers to entry but regulatory complexities exist.",
+      "type": "metric",
+      "category": "idea",
+      "subcategory": "Feasibility & Risk",
+      "detail": {
+        "title": "Regulatory Landscape Overview",
+        "summary": "Travel agencies face various regulatory challenges.",
+        "points": [
+          "Seller of Travel registration required in some states.",
+          "DOT regulations on refunds and disclosures.",
+          "Potential liability for packaging travel services."
+        ],
+        "source": "Prior context"
+      }
+    },
+    {
+      "id": "8",
+      "label": "Execution Constraints",
+      "value": "High-touch service model increases labor costs.",
+      "type": "metric",
+      "category": "idea",
+      "subcategory": "Feasibility & Risk",
+      "detail": {
+        "title": "Operational Constraints",
+        "summary": "Agencies must balance service quality with costs.",
+        "points": [
+          "Supplier accreditation and consortia access are critical.",
+          "Need for automation without losing personal touch.",
+          "Seasonality impacts demand and operational load."
+        ],
+        "source": "Prior context"
+      }
+    },
+    {
+      "id": "9",
+      "label": "MVP Wedge",
+      "value": "Advisor-in-your-pocket for Gen Z.",
+      "type": "metric",
+      "category": "idea",
+      "subcategory": "Product & Strategy",
+      "detail": {
+        "title": "Minimum Viable Product Strategy",
+        "summary": "Focus on mobile-first, socially inspired travel planning.",
+        "points": [
+          "24-hour itinerary turnaround for urban trips.",
+          "Transparent planning fees and disruption support.",
+          "Targeting U.S.-based Gen Z couples and friends."
+        ],
+        "source": "Prior context"
+      }
+    },
+    {
+      "id": "10",
+      "label": "Unique Advantage",
+      "value": "Social-to-booking integration.",
+      "type": "metric",
+      "category": "idea",
+      "subcategory": "Product & Strategy",
+      "detail": {
+        "title": "Unique Selling Proposition",
+        "summary": "Leverage social media for seamless booking.",
+        "points": [
+          "Link-in-bio trip builders for instant holds.",
+          "Creator collaborations for bundled itineraries.",
+          "AI-assisted curation for personalized experiences."
+        ],
+        "source": "Prior context"
+      }
+    },
+    {
+      "id": "11",
+      "label": "PMF Readiness",
+      "value": "Borderline readiness for product-market fit.",
+      "type": "chart-progress",
+      "category": "idea",
+      "subcategory": "Market Readiness & Validation",
+      "detail": {
+        "title": "Product-Market Fit Assessment",
+        "summary": "Demand and intent are strong but conversion is a challenge.",
+        "points": [
+          "High willingness to use advisors when value is clear.",
+          "Behavioral fit aligns with product vision.",
+          "Need proof on CAC:LTV from creator channels."
+        ],
+        "source": "Prior context"
+      }
+    },
+    {
+      "id": "12",
+      "label": "TAM, SAM, SOM",
+      "value": "$15B–$25B",
+      "type": "metric",
+      "category": "market",
+      "subcategory": "Market Sizing",
+      "detail": {
+        "title": "Market Size Overview",
+        "summary": "Potential market for Gen Z leisure bookings via advisors.",
+        "points": [
+          "TAM: $15B–$25B for U.S. Gen Z leisure bookings.",
+          "SAM: $1.5B–$3.0B for outbound trips to EU/Mex/Caribbean.",
+          "SOM: $15M–$60M gross bookings in the first 1-3 years."
+        ],
+        "source": "Prior context"
+      }
+    },
+    {
+      "id": "13",
+      "label": "SWOT Overview",
+      "value": "Strengths and weaknesses identified.",
+      "type": "chart-bar",
+      "category": "market",
+      "subcategory": "SWOT",
+      "detail": {
+        "title": "SWOT Analysis Overview",
+        "summary": "Strengths and weaknesses of the travel agency landscape.",
+        "points": [
+          "Strengths: High profit margins, low customer concentration.",
+          "Weaknesses: High competition, low barriers to entry.",
+          "Opportunities: High revenue growth potential.",
+          "Threats: Increasing competition from OTAs."
+        ],
+        "source": "Prior context"
+      }
+    }
+  ]
+}
